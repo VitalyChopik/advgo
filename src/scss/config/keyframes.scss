@@ -1,29 +1,27 @@
-@keyframes show-header {
+@keyframes up-anination {
   0% {
-    top: -100%;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(100px) rotate(30deg);
   }
 
   100% {
-    top: 0;
+    transform: translateY(0) rotate(0deg);
   }
 }
 
-@keyframes fade-up-big {
+@keyframes left-anination {
   0% {
-    transform: translateY(1rem);
-    opacity: 0;
+    transform: translateX(0) rotate(0deg);
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
-@keyframes rotation {
-  from {
-    transform: rotate(0);
+  50% {
+    transform: translateX(100px) rotate(30deg);
   }
-  to {
-    transform: rotate(359deg);
+
+  100% {
+    transform: translateX(0) rotate(0deg);
   }
 }

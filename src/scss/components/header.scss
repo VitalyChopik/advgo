@@ -16,8 +16,8 @@
 
   .header-is-sticky & {
     // ..стили для липкого хедера
-    padding: rem(5) 0;
-
+    background: #FFF;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
   }
 
   // .header__container

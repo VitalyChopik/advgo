@@ -13,6 +13,7 @@
 import BaseHelpers from './helpers/BaseHelpers';
 // import PopupManager from './modules/PopupManager';
 import BurgerMenu from './modules/BurgerMenu';
+import form from './modules/form';
 // import Tabs from './modules/Tabs';
 // import Accordion from './modules/Accordion';
 
@@ -62,3 +63,7 @@ new BurgerMenu().init();
 // 	defaultOpen: [], // [0,1]
 // 	collapsedClass: 'open',
 // });
+
+
+const heroForm = document.querySelector('.hero__form');
+heroForm ? form(heroForm) : null;
