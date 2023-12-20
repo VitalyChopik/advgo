@@ -5,6 +5,10 @@
   align-items: center;
 
   @include media-mx(992) {
+    min-height: 100vh;
+  }
+
+  @include media-mx(992) {
     min-height: auto;
     padding-top: rem(30);
   }
