@@ -3,3 +3,39 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.section__title {
+  color: #0A0A0A;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: 130%;
+  text-transform: uppercase;
+  position: relative;
+
+  @include media-mx(992) {
+    font-size: rem(28);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: rem(-12);
+    left: 0;
+    right: 0;
+    width: rem(60);
+    height: rem(5);
+    border-radius: 99px;
+    background: #15ADAE;
+    margin: 0 auto;
+
+    @include media-mx(992) {
+      width: rem(40);
+    }
+  }
+
+  span {
+    color: #15ADAE;
+  }
+}
