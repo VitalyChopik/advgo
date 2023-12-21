@@ -12,9 +12,9 @@
   <title>REVOLUTIONIZE YOUR MARKETING INSIGHTS WITH ADVANCED DATA ANALYSIS - ADVGO</title>
 
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.min.css?_v=20231221101536">
+  <link rel="stylesheet" href="css/main.min.css?_v=20231221112535">
 
-  <script defer="defer" src="js/main.min.js?_v=20231221101536"></script>
+  <script defer="defer" src="js/main.min.js?_v=20231221112535"></script>
 </head>
 
 <body>
@@ -25,11 +25,11 @@
     <nav class="header__menu menu">
       <div class="header__menu-logo"><img src="images/logo.svg" alt=""></div>
       <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link">About Us</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">How We Work</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Contact us</a></li>
+        <li class="menu__item"><a href="#about" class="menu__link">About Us</a></li>
+        <li class="menu__item"><a href="#work" class="menu__link">How We Work</a></li>
+        <li class="menu__item"><a href="#contact" class="menu__link">Contact us</a></li>
       </ul>
-      <a href="#" class="header__btn">Contact Us</a>
+      <a href="#contact-us" class="header__btn">Contact Us</a>
     </nav>
     <button class="header__burger icon-menu">
   <span></span>
@@ -61,7 +61,7 @@
     <img src="images/icons/hero-5.svg" alt="" class="hero__icon icon-5">
   </div>
 </div>
-      <div class="about">
+      <div class="about" id="about">
   <div class="about__container">
     <h2 class="section__title about__title">Welcome to <span>AdvGo42</span></h2>
     <p class="about__text">We harness the power of data to transform your marketing strategies. <br> Dive into our suite
@@ -78,7 +78,7 @@
           <p class="about__box-text">Utilize our AI-driven forecasting tools to predict market trends and customer
             behavior.</p>
         </div>
-        <a href="#" class="about__box-link">Try Forecasting Analysis</a>
+        <a href="#" class="about__box-link" data-value="Forecasting Analysis">Try Forecasting Analysis</a>
       </div>
       <div class="about__box swiper-slide">
         <div class="about__box-wrapper">
@@ -92,7 +92,7 @@
           <p class="about__box-text">Implement advanced segmentation algorithms to categorize your audience for targeted
             marketing</p>
         </div>
-        <a href="#" class="about__box-link">Explore User Segmentation</a>
+        <a href="#" class="about__box-link" data-value="User Segmentation">Explore User Segmentation</a>
       </div>
       <div class="about__box swiper-slide">
         <div class="about__box-wrapper">
@@ -109,7 +109,7 @@
           <h3 class="about__box-title">Exploratory Data Analysis (EDA)</h3>
           <p class="about__box-text">Dive deep into your data to uncover hidden trends and opportunities</p>
         </div>
-        <a href="#" class="about__box-link">Uncover Insights with EDA</a>
+        <a href="#" class="about__box-link" data-value="EDA">Uncover Insights with EDA</a>
       </div>
       <div class="about__box swiper-slide">
         <div class="about__box-wrapper">
@@ -126,12 +126,12 @@
           <h3 class="about__box-title">Attribution Analysis</h3>
           <p class="about__box-text">Analyze how different marketing channels contribute to customer conversions</p>
         </div>
-        <a href="#" class="about__box-link">Enhance with Attribution Analysis</a>
+        <a href="#" class="about__box-link" data-value="Attribution Analysis">Enhance with Attribution Analysis</a>
       </div>
     </div>
   </div>
 </div>
-      <div class="work">
+      <div class="work" id="work">
   <div class="work__container">
     <h2 class="section__title work__title">How We Work</h2>
     <div class="work__wrapper">
@@ -174,7 +174,7 @@
 
   </div>
 </div>
-      <div class="contact">
+      <div class="contact" id="contact">
   <div class="contact__bg"><img src="images/contact__bg.svg" alt=""></div>
   <div class="contact__container">
     <h2 class="section__title contact__title">Contact us</h2>
@@ -185,8 +185,11 @@
           <div class="contact__block-dashed"></div>
           <h3 class="contact__block-title">Contact us</h3>
           <form class="contact__form">
-            <div class="contact__form-box"><input type="text" name="E-mail" class="contact__form-input" placeholder="Email"></div>
-            <div class="contact__form-box"><input type="text" name="Your Name" class="contact__form-input" placeholder="Name"></div>
+            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="Form" value="Main Contact Form">
+            <div class="contact__form-box"><input type="text" name="E-mail" class="contact__form-input" placeholder="Email" required></div>
+            <div class="contact__form-box"><input type="text" name="Your Name" class="contact__form-input" placeholder="Name" required></div>
             <div class="contact__form-box"><input type="text" name="Company" class="contact__form-input" placeholder="Company">
             </div>
             <div class="contact__form-box"><input type="text" name="Other" class="contact__form-input" placeholder="Other">
@@ -202,6 +205,14 @@
             </div>
             <button class="contact__form-submit">Submit</button>
           </form>
+          <div class="contact__block-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="168" height="168" viewBox="0 0 168 168" fill="none">
+              <path d="M149.625 91.875C144.375 118.125 124.583 142.842 96.8102 148.365C83.2651 151.062 69.2142 149.418 56.6582 143.665C44.1022 137.912 33.6812 128.345 26.8791 116.325C20.0769 104.305 17.2403 90.4458 18.7732 76.7201C20.3061 62.9943 26.1304 50.1021 35.4167 39.879C54.4637 18.9 86.6252 13.125 112.875 23.625" stroke="#16ADAE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M60.375 81.375L86.625 107.625L149.625 39.375" stroke="#16ADAE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 class="success__title">Thank you for <br> your feedback!</h3>
+            <p class="success__text">In the near future, our manager will contact you.</p>
+          </div>
         </div>
       </div>
       <div class="contact__image"><img src="images/contact.svg" alt=""></div>
@@ -212,7 +223,7 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact-us">
   <div class="footer__container">
     <div class="footer__contacts">
       <div class="footer__logo"><img src="images/logo-black.svg" alt=""></div>
@@ -245,9 +256,9 @@
     <div class="footer__content">
       <span class="footer__copy">© 2023 AdvGo42 Advertising agency</span>
       <ul class="footer__menu">
-        <li class="footer__item"><a href="#" class="footer__link">Cookie Policy</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">EULA</a></li>
+        <li class="footer__item"><a href="https://advgo42.com/doc/cookie.pdf" target="_blank" class="footer__link">Cookie Policy</a></li>
+        <li class="footer__item"><a href="https://advgo42.com/doc/privacy.pdf" class="footer__link" target="_blank">Privacy Policy</a></li>
+        <li class="footer__item"><a href="https://advgo42.com/doc/eula.pdf" class="footer__link" target="_blank">EULA</a></li>
       </ul>
     </div>
   </div>
