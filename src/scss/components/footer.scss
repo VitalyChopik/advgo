@@ -1,4 +1,10 @@
 .footer {
+  margin-top: rem(90);
+
+  @include media-mx(992) {
+    margin-top: rem(60);
+  }
+
   padding: rem(50) 0;
   background: #0C0F0F;
 

@@ -89,11 +89,13 @@
   }
 
   &__box-image {
-    max-width: rem(100);
-    width: 100%;
+
+    width: rem(100);
+    min-width: rem(100);
 
     @include media-mx(992) {
-      max-width: rem(88);
+      width: rem(88);
+      min-width: rem(88);
     }
   }
 
@@ -138,7 +140,7 @@
     &.icon-4 {
       bottom: rem(110);
       right: rem(30);
-      animation: left-anination 12s linear reverse;
+      animation: left-anination 12s linear reverse infinite;
     }
 
     &.icon-5 {

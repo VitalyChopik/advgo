@@ -197,6 +197,7 @@
     line-height: 160%;
     height: rem(60);
     width: rem(160);
+    min-width: rem(160);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,7 +244,7 @@
     &.icon-4 {
       top: rem(-25);
       left: 30.3vw;
-      animation: left-anination 12s linear reverse;
+      animation: left-anination 12s linear reverse infinite;
     }
 
     &.icon-5 {
