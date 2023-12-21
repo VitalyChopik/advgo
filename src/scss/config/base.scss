@@ -43,6 +43,10 @@
 
   /** Поменять на clip - если используется в проекте position: sticky */
   overflow: hidden;
+
+  @include media-mx(992) {
+    overflow: clip;
+  }
 }
 
 .page {

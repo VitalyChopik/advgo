@@ -12,7 +12,9 @@
 
 import BaseHelpers from './helpers/BaseHelpers';
 import BurgerMenu from './modules/BurgerMenu';
+import about from './modules/about';
 import form from './modules/form';
+import mainForm from './modules/mainForm';
 import slider from './modules/slider';
 BaseHelpers.checkWebpSupport();
 
@@ -36,7 +38,14 @@ new BurgerMenu().init();
 
 
 const heroForm = document.querySelector('.hero__form');
+const aboutBlock = document.querySelector('.about__container');
+const contactForm = document.querySelector('.contact__block-form');
 heroForm ? form(heroForm) : null;
 
-const aboutSlider = document.querySelector('.about__container');
-aboutSlider ? slider(aboutSlider) : null;
+
+aboutBlock ? slider(aboutBlock) : null;
+aboutBlock ? about(aboutBlock, contactForm) : null;
+contactForm ? mainForm(contactForm) : null;
+
+
+

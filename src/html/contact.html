@@ -1,4 +1,4 @@
-<div class="contact">
+<div class="contact" id="contact">
   <div class="contact__bg"><img src="@img/contact__bg.svg" alt=""></div>
   <div class="contact__container">
     <h2 class="contact__title section__title">Contact us</h2>
@@ -9,10 +9,13 @@
           <div class="contact__block-dashed"></div>
           <h3 class="contact__block-title">Contact us</h3>
           <form class="contact__form">
+            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="Form" value="Main Contact Form">
             <div class="contact__form-box"><input type="text" name="E-mail" class="contact__form-input"
-                placeholder="Email"></div>
+                placeholder="Email" required></div>
             <div class="contact__form-box"><input type="text" name="Your Name" class="contact__form-input"
-                placeholder="Name"></div>
+                placeholder="Name" required></div>
             <div class="contact__form-box"><input type="text" name="Company" class="contact__form-input"
                 placeholder="Company">
             </div>
@@ -30,6 +33,17 @@
             </div>
             <button class="contact__form-submit">Submit</button>
           </form>
+          <div class="contact__block-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="168" height="168" viewBox="0 0 168 168" fill="none">
+              <path
+                d="M149.625 91.875C144.375 118.125 124.583 142.842 96.8102 148.365C83.2651 151.062 69.2142 149.418 56.6582 143.665C44.1022 137.912 33.6812 128.345 26.8791 116.325C20.0769 104.305 17.2403 90.4458 18.7732 76.7201C20.3061 62.9943 26.1304 50.1021 35.4167 39.879C54.4637 18.9 86.6252 13.125 112.875 23.625"
+                stroke="#16ADAE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M60.375 81.375L86.625 107.625L149.625 39.375" stroke="#16ADAE" stroke-width="4"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h3 class="success__title">Thank you for <br> your feedback!</h3>
+            <p class="success__text">In the near future, our manager will contact you.</p>
+          </div>
         </div>
       </div>
       <div class="contact__image"><img src="@img/contact.svg" alt=""></div>

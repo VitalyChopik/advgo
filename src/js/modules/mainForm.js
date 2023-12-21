@@ -1,28 +1,31 @@
 
-const form = (formBlock) => {
-  formBlock.addEventListener('submit', (e) => {
+const mainForm = (formBlock) => {
+  const form = formBlock.querySelector('.contact__form');
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     sendData();
   });
   function sendData() {
-
-    let formData = new FormData(formBlock);
-    formBlock.appendChild(spinner);
+    let formData = new FormData(form);
+    form.appendChild(spinner);
     fetch('https://formsubmit.co/chopikvitali@yandex.by', {
       method: 'POST',
       body: formData,
     })
       .then(response => response.text())
       .then(data => {
-        formBlock.innerHTML = `<span class="success">🎉 Yay! Thanks for reaching us! We’ll get back to you asap.</span>`
+        formBlock.classList.add('success');
+        formBlock.querySelector('.spinner').remove();
       })
       .catch(error => {
-        formBlock.innerHTML = `<span class="error">🙊 Oops! Something went wrong. Please try submitting the form again later.</span>`
+        form.innerHTML = `<span class="error">🙊 Oops! Something went wrong. Please try submitting the form again later.</span>`
       });
 
   }
 }
-export default form;
+
+export default mainForm;
+
 
 let spinner = document.createElement('div');
 spinner.classList.add('spinner');
