@@ -1,6 +1,17 @@
 
 const mainForm = (formBlock) => {
   const form = formBlock.querySelector('.contact__form');
+  const select = formBlock.querySelector('.contact__form-select');
+  select.addEventListener('change', function () {
+    var selectedValue = this.value;
+
+    if (selectedValue === 'Other') {
+      console.log('Other option selected!');
+      formBlock.querySelector('.contact__form-box.other').classList.add('active');
+    } else {
+      formBlock.querySelector('.contact__form-box.other').classList.remove('active');
+    }
+  });
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     sendData();

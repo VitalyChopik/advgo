@@ -186,6 +186,14 @@
         pointer-events: none;
       }
     }
+
+    &.other {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
   }
 
   &__form-input {
